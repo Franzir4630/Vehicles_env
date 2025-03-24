@@ -9,8 +9,8 @@ df_vehicles = df_vehicles.drop_duplicates()
 # Creamos encabezado
 st.header('Analisis de vehiculos')
 
-hist_button = st.button('Construir histograma') # crear un botón para el histograma
-disp_button = st.button('Construir gráfico de dispersión') # Crear botón para el gráfico de dispersión
+hist_button = st.button('Histograma') # crear un botón para el histograma
+build_scatter = st.checkbox('Gráfico de dispersión') # Crear botón para el gráfico de dispersión
 
 if hist_button: # al hacer clic en el botón
     # escribir un mensaje
@@ -22,7 +22,7 @@ if hist_button: # al hacer clic en el botón
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
             
-if disp_button: # al hacer click en el botón
+if build_scatter: # al hacer click en el botón
     # escribir el mensaje
     st.write('creación de un gráfico de dispersión para el conjunto de datos de anuncios de ventas de coches')
 
